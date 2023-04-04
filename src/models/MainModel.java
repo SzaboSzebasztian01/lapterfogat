@@ -12,8 +12,8 @@ package models;
 
 public class MainModel {
     public double calcVolume(double sideA, double diagonal){
-        double volume = ;
-        return 0.0;
+        double volume = Math.pow(diagonal, 3) / Math.sqrt(8);
+        return volume;
         
     }
     
