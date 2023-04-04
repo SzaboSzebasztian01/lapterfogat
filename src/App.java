@@ -8,8 +8,25 @@
  * Licenc: GNU GPL
  */
 
-public class App {
+import controllers.MainController;
+import javafx.application.Application;
+import javafx.scene.Scene;
+import javafx.stage.Stage;
+import views.MainPanel;
+
+public class App extends Application {
     public static void main(String[] args) throws Exception {
-        System.out.println("Hello, World!");
+        launch(args);
+
+    }
+
+    @Override
+    public void start(Stage stage) throws Exception {
+        MainController mainController = new MainController();
+        MainPanel mainPanel = mainController.getMainPanel();
+
+        Scene scene = new Scene(mainPanel, 400, 300);
+        stage.setScene(scene);
+        stage.show();
     }
 }

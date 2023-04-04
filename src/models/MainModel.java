@@ -11,5 +11,10 @@
 package models;
 
 public class MainModel {
+    public double calcVolume(double sideA, double diagonal){
+        double volume = ;
+        return 0.0;
+        
+    }
     
 }
