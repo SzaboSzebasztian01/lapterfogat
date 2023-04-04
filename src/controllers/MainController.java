@@ -35,11 +35,9 @@ public class MainController {
     }
 
     private void onClickCalcButton(){
-        String sideAStr = this.mainPanel.getSideAPanel().getValue();
         String diagonalStr = this.mainPanel.getDiagonalPanel().getValue();
-        double sideA = Double.parseDouble(sideAStr);
         double diagonal = Double.parseDouble(diagonalStr);
-        Double volume = mainModel.calcVolume(sideA, diagonal);
+        Double volume = mainModel.calcVolume(diagonal);
         String volumeStr = volume.toString();
         
         this.mainPanel.getVolumePanel().setValue(volumeStr);

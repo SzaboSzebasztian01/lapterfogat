@@ -19,7 +19,6 @@ import javafx.scene.layout.VBox;
 
 public class MainPanel extends VBox{
     TitlePanel titlePanel;
-    InputPanel sideAPanel;
     InputPanel diagonalPanel;
     ButtonPanel buttonPanel;
     InputPanel volumePanel;
@@ -35,7 +34,6 @@ public class MainPanel extends VBox{
 
     private void initComponent(){
         this.titlePanel = new TitlePanel();
-        this.sideAPanel = new InputPanel();
         this.diagonalPanel = new InputPanel();
         this.buttonPanel = new ButtonPanel();
         this.volumePanel = new InputPanel();
@@ -45,7 +43,6 @@ public class MainPanel extends VBox{
 
     private void setComponent(){
         this.titlePanel.setText("Kocka térfogatszámítás");
-        this.sideAPanel.setText("Oldal hossz: ");
         this.diagonalPanel.setText("Lapátló: ");
         this.buttonPanel.setCalcButtonText("Számít");
         this.volumePanel.setText("Térfogat: ");
@@ -55,7 +52,6 @@ public class MainPanel extends VBox{
     
     private void addComponent(){
         this.getChildren().add(this.titlePanel);
-        this.getChildren().add(this.sideAPanel);
         this.getChildren().add(this.diagonalPanel);
         this.getChildren().add(this.buttonPanel);
         this.getChildren().add(this.volumePanel);
@@ -67,12 +63,7 @@ public class MainPanel extends VBox{
         this.setAlignment(Pos.CENTER);
 
     }
-
-    public InputPanel getSideAPanel() {
-        return sideAPanel;
-
-    }
-
+    
     public InputPanel getDiagonalPanel() {
         return diagonalPanel;
 
